@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Explore</string>
+    <string name="title_toolbar_main_screen">Scan KTP OCR Example</string>
+    <string name="title_toolbar_scan_ocr">Scan KTP OCR</string>
+    <string name="title_toolbar_ocr_result">KTP Result</string>
+    <string name="title_toolbar_capture_ocr">Capture KTP OCR</string>
+</resources>

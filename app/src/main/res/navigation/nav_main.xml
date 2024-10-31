@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/fragment_main">
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.anvipus.explore.ui.xml.MainFragment"
+        android:label=""
+        tools:layout="@layout/main_fragment">
+        <action
+                android:id="@+id/action_to_scan_ocr"
+                app:destination="@id/fragment_scan_ocr" />
+
+        <action
+                android:id="@+id/action_to_capture_ocr"
+                app:destination="@id/fragment_capture_ocr" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/fragment_scan_ocr"
+            android:name="com.anvipus.explore.ui.xml.ocr.ScanOCRFragment"
+            android:label=""
+            tools:layout="@layout/scan_ocr_fragment">
+
+        <action
+                android:id="@+id/action_to_scan_ocr_result"
+                app:destination="@id/fragment_ocr_result"
+                app:popUpTo="@id/fragment_main"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/fragment_capture_ocr"
+            android:name="com.anvipus.explore.ui.xml.ocr.CaptureKTPOcrFragment"
+            android:label=""
+            tools:layout="@layout/capture_ktp_ocr_fragment">
+
+        <action
+                android:id="@+id/action_to_scan_ocr_result"
+                app:destination="@id/fragment_ocr_result"
+                app:popUpTo="@id/fragment_main"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/fragment_ocr_result"
+            android:name="com.anvipus.explore.ui.xml.ocr.OCRResultFragment"
+            android:label=""
+            tools:layout="@layout/ocr_ktp_result_fragment">
+
+        <argument
+                android:name="data"
+                app:argType="com.anvipus.core.utils.model.OCRResultModel" />
+
+    </fragment>
+
+</navigation>
