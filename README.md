@@ -1,4 +1,4 @@
-# Android Explore V3
+# Android OCR Example Using ML Kit
 
 
 
